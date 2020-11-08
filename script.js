@@ -40,8 +40,6 @@ class Grid {
 
         document.getElementById("exportBtn").addEventListener('click', () => {this.exportToCsv()}, false)
 
-        this.populate();
-
         this.dataTab = [];
         // this.dataTab = [
         //     ["series number"],
@@ -181,6 +179,10 @@ class Grid {
 
     Test() {
 
+        this.wipe();
+        
+        this.populate();
+
         this.startTime();
 
     }
@@ -269,6 +271,8 @@ var myLayout = new Layout(10, 13, null, 9)
 // ]);
 
 var myGrid = new Grid(myLayout, 1);
+
+
 
 myGrid.Test();
 
