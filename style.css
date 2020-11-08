@@ -72,11 +72,14 @@ h1, h2, h3, h4, p {
 
 /* Decorations */
 .btn {
-  margin: 0px;
-  padding: 0px;
-  height: 30px;
-  flex-grow: 1;
+
   background-color: thistle;
+}
+
+.space {
+    margin: 0px;
+    padding: 0px;
+    flex-grow: 1;
 }
 
 .placeholder, .placeholder:hover, .placeholder:active {

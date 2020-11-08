@@ -68,30 +68,37 @@ class Grid {
         for (row = 0; row < this.layout.length; row++) {
             for (col = 0; col < this.layout[row].length; col++) {
                 
-                var btn = document.createElement('button');
-                btn.type = 'button';
+                var node;
 
-                btn.classList.add('btn', 'btn-default');
-                btn.style.width = Math.floor(100 / this.width) + '%'; 
-                btn.style.height = Math.floor(100 / this.height) + '%';
-                
                 if (this.layout[row][col] != undefined) {
-                    btn.id = t++;
+                    
+                    node = document.createElement('button');
+                    node.type = 'button';
+    
+                    node.classList.add('btn', 'btn-default');
+                    node.style.width = Math.floor(100 / this.width) + '%'; 
+                    node.style.height = Math.floor(100 / this.height) + '%';
+
+                    node.id = t++;
 
                     if (this.numbersToLetters == null) {
-                        btn.textContent = '('+t+')';
+                        node.textContent = '('+t+')';
                     }
                     else {
-                        btn.textContent = this.defaultText + this.numberToLetters[t-1];
+                        node.textContent = this.defaultText + this.numberToLetters[t-1];
                     }
-                    btn.addEventListener('click', () => { this.handleClick() }, false)
+                    node.addEventListener('click', () => { this.handleClick() }, false)
                 }
                 else {
-                    btn.classList.add('placeholder');
-                    btn.hidden = true;
+                    
+                    node = document.createElement('div');
+    
+                    node.classList.add('space');
+                    node.style.width = Math.floor(100 / this.width) + '%'; 
+                    node.style.height = Math.floor(100 / this.height) + '%';
                 }
                 
-                this.container.appendChild(btn);
+                this.container.appendChild(node);
             }
         }
 
@@ -131,8 +138,6 @@ class Grid {
             }, 250)
             
             target.removeEventListener('click', this.handleClick);
-
-            console.log(this.currentIndex)
             
             if (this.currentIndex++ + 2 == this.clickNumber) this.endTest();
 
