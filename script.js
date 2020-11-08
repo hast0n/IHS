@@ -1,6 +1,26 @@
+function shuffle(array) {
+    
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+}
+
 class Grid {
 
-    constructor(layout, seriesIndex = 1) {
+    constructor(layout) {
 
         this.container = document.getElementById('main_matrix');
         this.height = layout.height;
@@ -35,10 +55,11 @@ class Grid {
 
         this.elapsed = 0;
         this.currentIndex = -1;
-        this.seriesIndex = seriesIndex;
         this.clickNumber = layout.clickNumber;
 
-        document.getElementById("exportBtn").addEventListener('click', () => {this.exportToCsv()}, false)
+        this.exportBtn = document.getElementById("exportBtn");
+        this.exportBtn.hidden = true;
+        this.exportBtn.addEventListener('click', () => {this.exportToCsv()}, false);
 
         this.dataTab = [];
         // this.dataTab = [
@@ -62,12 +83,7 @@ class Grid {
     populate() {
 
         var row, col;
-        var ids = [...Array(this.clickNumber).keys()]
-        
-        console.log(this.clickNumber);
-        
-        this.shuffle(ids);
-        
+        var ids = shuffle([...Array(this.clickNumber).keys()])
 
         for (row = 0; row < this.layout.length; row++) {
             for (col = 0; col < this.layout[row].length; col++) {
@@ -108,8 +124,6 @@ class Grid {
                 this.container.appendChild(node);
             }
         }
-
-        this.clickNumber = t;
     }
     
     startTime() {
@@ -122,26 +136,6 @@ class Grid {
         clearInterval(this.timeInterval);
     }
 
-    shuffle(array) {
-    
-        var currentIndex = array.length, temporaryValue, randomIndex;
-      
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-      
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex -= 1;
-      
-          // And swap it with the current element.
-          temporaryValue = array[currentIndex];
-          array[currentIndex] = array[randomIndex];
-          array[randomIndex] = temporaryValue;
-        }
-      
-        return array;
-    }
-    
     /* ----------------------------------------------- */
     
     handleClick(event) {
@@ -152,6 +146,8 @@ class Grid {
         var id = parseInt(target.id);
 
         if (id == this.currentIndex + 1) {
+            
+            this.currentIndex++;
 
             this.dataTab.push(this.elapsed);
 
@@ -166,7 +162,7 @@ class Grid {
             
             target.removeEventListener('click', this.handleClick);
             
-            if (this.currentIndex++ + 2 == this.clickNumber) this.endTest();
+            if (this.currentIndex +1 == this.clickNumber) this.endTest();
 
         } else {
             target.classList.add('wrong');
@@ -191,6 +187,7 @@ class Grid {
 
         this.stopTime();
 
+        this.exportBtn.hidden = false;
     }
 
     exportToCsv() {
