@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://quizflare.herokuapp.com/quiz/3?lang=fr -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Di7ipovrwSVQeP0Fl1LklZGSbyyqSlaxC2bJXQqR">
+
+    <title>
+        Quizflare |     Le Cinquième élément
+    </title>
+
+    <!-- Scripts -->
+    <script src="./EZ£_files/app.js.téléchargement" defer=""></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link href="./EZ£_files/css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="./EZ£_files/app.css" rel="stylesheet">
+    <link href="./EZ£_files/navbar.css" rel="stylesheet">
+    <link href="./EZ£_files/body.css" rel="stylesheet">
+
+    <!-- Additional links if desired -->
+    
+    <!-- Web app brand icon -->
+    <link rel="icon" type="image/png" href="./EZ£_files/logo.svg">
+
+<style type="text/css">
+p.good_answer[data-v-45a1265a] {
+    margin-right: 100px;
+    font-size: 0.85em;
+    color: gray;
+}
+.question-card[data-v-45a1265a] {
+    margin: 0;
+    /*box-shadow: rgba(1,1,1,0.1) 1px 1px 6px;*/
+    padding: 20px;
+    border-radius: 7px;
+}
+div.question-card > p[data-v-45a1265a] {
+    font-size: large;
+    color: #b9bbbe;
+}
+
+/*div.question-wrapper {*/
+/*    border-radius: 10px;*/
+/*    position: relative;*/
+/*    background: linear-gradient(to right, #ff413c, #c900c9);*/
+/*    padding: 0px;*/
+/*}*/
+div.question-create-header[data-v-45a1265a] {
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+div.question-create-content[data-v-45a1265a] {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row;
+}
+div.question-create-content > hr[data-v-45a1265a] {
+    width: 1px;
+    height: auto;
+    background-color: #b9bbbe;
+    margin: 10px 10px 15px 20px;
+}
+div.question-create-content > div > p[data-v-45a1265a] {
+    margin-left: 45px;
+    font-size: larger;
+}
+div.question-create-field[data-v-45a1265a] {
+    display: flex;
+    align-items: center;
+}
+div.question-create-field > input[data-v-45a1265a] {
+    border: none;
+}
+div.question-create-field > input[data-v-45a1265a]::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.41);
+}
+div.question-create-field > input[data-v-45a1265a]::-moz-placeholder {
+    color: rgba(0,0,0,0.41);
+}
+div.question-create-field > input[data-v-45a1265a]:-ms-input-placeholder {
+    color: rgba(0,0,0,0.41);
+}
+div.question-create-field > input[data-v-45a1265a]::-ms-input-placeholder {
+    color: rgba(0,0,0,0.41);
+}
+div.question-create-field > input[data-v-45a1265a]::placeholder {
+    color: rgba(0,0,0,0.41);
+}
+div.question-create-field > p[data-v-45a1265a] {
+    white-space: nowrap;
+    margin: 0 5px 0 0;
+}
+div.question-create-field > select[data-v-45a1265a] {
+    width: auto;
+}
+div.question-create-answers[data-v-45a1265a] {
+    width: 100%;
+}
+div.question-create-answers > button[data-v-45a1265a] {
+    margin-left: 45px;
+}
+textarea[data-v-45a1265a] {
+    padding-left: 45px;
+    border: none;
+    width: 100%;
+    -webkit-appearance: none;
+}
+textarea[data-v-45a1265a]:focus {
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+}
+div.add-answer[data-v-45a1265a] {
+    font-size: medium;
+    color: #b9bbbe;
+    cursor: pointer;
+    margin-left: 10px
+}
+</style><style type="text/css">
+p[data-v-23c50b18] {
+    margin-bottom: 0;
+}
+.empty-message[data-v-23c50b18] {
+    color: rgba(0,0,0,0.64);
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 20px
+}
+.legend[data-v-23c50b18] {
+    color: rgba(0,0,0,0.68);
+    margin: 15px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.legend > div[data-v-23c50b18] {
+    display: flex;
+}
+.legend > div > p[data-v-23c50b18]:nth-child(2) {
+    color: rgba(0,0,0,0.25);
+    margin-left: 10px;
+}
+hr[data-v-23c50b18] {
+    padding: 0;
+    margin: 0 20px;
+}
+.question-list-item[data-v-23c50b18] {
+    margin: 7px 10px;
+}
+.modal-buttons[data-v-23c50b18] {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+}
+.modal-buttons > button[data-v-23c50b18] {
+    margin-left: 20px
+}
+</style><style type="text/css">
+.right-side[data-v-dd5e8b4c] {
+    display: flex;
+    align-items: center;
+}
+p.close[data-v-dd5e8b4c] {
+    margin-bottom: 2px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+div.green-dot[data-v-dd5e8b4c], div.red-dot[data-v-dd5e8b4c] {
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+div.green-dot[data-v-dd5e8b4c] {
+    background-color: rgba(42, 144, 85, 0.63);
+}
+div.red-dot[data-v-dd5e8b4c] {
+    background-color: rgba(224, 46, 46, 0.64);
+}
+.answers-list-item[data-v-dd5e8b4c] {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+.answers-list[data-v-dd5e8b4c] {
+    padding-bottom: 10px;
+}
+.answers-list-item > p[data-v-dd5e8b4c] {
+    margin: 0 10px 0 0;
+}
+.text-answer[data-v-dd5e8b4c] {
+    font-style: italic;
+    color: rgba(0,0,0,0.64);
+}
+.dropdown-toggle[data-v-dd5e8b4c] {
+    border: none;
+    background-color: transparent;
+    color: #b9bbbe;
+    outline: none;
+    box-shadow: none;
+}
+.select-item[data-v-dd5e8b4c] {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    min-height: 50px;
+    padding: 0 7px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.type-info[data-v-dd5e8b4c] {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.header[data-v-dd5e8b4c] {
+    width: 100%;
+    display: flex;
+    margin: 8px 0 4px;
+    align-items: center;
+    justify-content: space-between;
+}
+.type[data-v-dd5e8b4c] {
+    color: rgba(0,0,0,0.25);
+    margin: 0 10px;
+    white-space: nowrap;
+}
+.text[data-v-dd5e8b4c] {
+    margin: 0 10px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+</style><style type="text/css">
+.answer-create[data-v-51a9679c] {
+    margin: 10px;
+    padding: 5px 10px;
+    align-items: center;
+    display: flex;
+    border-radius: 7px;
+    transition: background-color 0.3s ease-out;
+    background-color: white;
+    box-shadow: rgba(1,1,1,0.12) 2px 2px 7px;
+}
+button[data-v-51a9679c] {
+    border: none; /*1px solid rgba(128, 128, 128, 0.36);*/
+    margin-left: 10px;
+}
+button[data-v-51a9679c]:hover {
+    color: rgba(0,0,0,0.36)
+}
+div.answer-create > p[data-v-51a9679c] {
+    padding-right: 10px;
+    font-size: x-large;
+    align-self: center;
+    margin: 0;
+    color: rgba(1, 1, 1, 0.31);
+}
+div.answer-create > input[data-v-51a9679c] {
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+}
+</style><style type="text/css">.toggle-label[data-v-6d386a0f] {
+  cursor: pointer;
+  position: relative;
+}
+.toggle-label[data-v-6d386a0f]:before {
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999%;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23a0aec0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>');
+  transition: transform 0.15s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateX(0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.toggle-checkbox:checked + .toggle-label[data-v-6d386a0f]:before {
+  transform: translateX(1.5rem);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23a0aec0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+}
+.toggle.slim .toggle-label[data-v-6d386a0f]:before {
+  top: -0.15rem;
+  left: 0;
+}
+.toggle.slim .toggle-checkbox:checked + .toggle-label[data-v-6d386a0f]:before {
+  transform: translateX(1.75rem);
+}
+.toggle.colour .toggle-label[data-v-6d386a0f] {
+  background-color: #feb2b2;
+}
+.toggle.colour .toggle-checkbox:checked + .toggle-label[data-v-6d386a0f] {
+  background-color: #9ae6b4;
+}
+.toggle.colour .toggle-label[data-v-6d386a0f] {
+  background-color: #feb2b2;
+}
+.toggle-label[data-v-6d386a0f] {
+  position: relative;
+}
+.duration-150[data-v-6d386a0f] {
+  transition-duration: 150ms;
+}
+.ease-out[data-v-6d386a0f] {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.w-12[data-v-6d386a0f] {
+  width: 3rem;
+}
+.h-6[data-v-6d386a0f] {
+  height: 1.5rem;
+  margin-bottom: 0;
+}
+.block[data-v-6d386a0f] {
+  display: block;
+}
+.rounded-full[data-v-6d386a0f] {
+  border-radius: 9999px;
+}
+*[data-v-6d386a0f],[data-v-6d386a0f]::after,[data-v-6d386a0f]::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e2e8f0;
+}
+.hidden[data-v-6d386a0f] {
+  display: none;
+}</style><style type="text/css">
+.my-modal[data-v-2b5f77de] {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    overflow-y: scroll;
+}
+.modal-backdrop[data-v-2b5f77de] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2010;
+    -webkit-animation-name: fade-data-v-2b5f77de;
+            animation-name: fade-data-v-2b5f77de;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.small[data-v-2b5f77de] {
+    width: 25%;
+}
+.large[data-v-2b5f77de] {
+    width: 50%;
+}
+.modal-context[data-v-2b5f77de] {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: flex-start;
+    max-height: 75%;
+    height: auto;
+    top: 100px;
+    background-color: white;
+    box-shadow: rgba(1,1,1,0.21) 0 0 10px;
+    -webkit-animation-name: appear-data-v-2b5f77de;
+            animation-name: appear-data-v-2b5f77de;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    overflow: hidden;
+    z-index: 2020;
+}
+@-webkit-keyframes appear-data-v-2b5f77de {
+from {
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+}
+to {
+        height: auto;
+        border-radius: 10px;
+}
+}
+@keyframes appear-data-v-2b5f77de {
+from {
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+}
+to {
+        height: auto;
+        border-radius: 10px;
+}
+}
+@-webkit-keyframes fade-data-v-2b5f77de {
+from {
+        background-color: rgba(0,0,0,0);
+}
+to {
+        background-color: rgba(0,0,0,0.21);
+}
+}
+@keyframes fade-data-v-2b5f77de {
+from {
+        background-color: rgba(0,0,0,0);
+}
+to {
+        background-color: rgba(0,0,0,0.21);
+}
+}
+.modal-context > hr[data-v-2b5f77de] {
+    margin: 0;
+    padding: 0
+}
+.my-modal-content[data-v-2b5f77de] {
+    width: 100%;
+    overflow-x: hidden;
+    max-height: 60vh
+}
+.my-modal-header[data-v-2b5f77de], .my-modal-footer[data-v-2b5f77de] {
+    display: flex;
+    align-content: center;
+    height: 70px;
+    width: 100%;
+}
+.modal-btn[data-v-2b5f77de] {
+    background-color: rgba(255,65,60,0.89);
+    border-radius: 7px;
+    padding: 10px;
+    margin: auto 10px auto 0;
+    border: none;
+    color: white;
+    transition: color 0.1s ease;
+}
+.modal-btn[data-v-2b5f77de]:hover {
+    color: rgba(255,255,255,0.78)
+}
+.modal-btn[data-v-2b5f77de]:active {
+    background-color: rgb(224, 46, 46);
+}
+.modal-close[data-v-2b5f77de] {
+    background-color: rgb(221, 221, 221);
+    border-radius: 7px;
+    padding: 10px;
+    margin: auto 10px auto 0;
+    color: rgba(76,76,76,0.78);
+    border: none;
+    transition: color 0.1s ease;
+}
+.modal-close[data-v-2b5f77de]:hover {
+    color: rgba(155, 155, 155, 0.78)
+}
+.modal-close[data-v-2b5f77de]:active {
+    background-color: rgb(107, 103, 103);
+}
+.my-modal-footer[data-v-2b5f77de] {
+    justify-content: flex-end
+}
+.my-modal-header[data-v-2b5f77de] {
+    justify-content: normal;
+}
+.title[data-v-2b5f77de] {
+    font-size: x-large;
+    color: #595959;
+    margin: auto 20px;
+    padding: 0
+}
+</style><style type="text/css">
+.page-info[data-v-531f6250] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: linear-gradient(120deg, rgba(247, 101, 0, 0.93), rgb(255, 46, 46), rgba(222, 0, 93, 0.9));;
+    box-shadow: rgba(0,0,0,0.2) 4px 4px 14px;
+    cursor: pointer;
+    color: white;
+    font-size: 3.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-info[data-v-531f6250]:hover {
+    background: linear-gradient(120deg, rgba(242, 101, 0, 0.93), rgb(241, 44, 44), rgba(213, 0, 93, 0.9));
+}
+.page-info > p[data-v-531f6250] {
+    margin: 0 !important;
+}
+.info-content[data-v-531f6250] {
+    padding: 20px
+}
+</style><style type="text/css">.base-timer[data-v-1fc90fb6] {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.base-timer__svg[data-v-1fc90fb6] {
+  transform: scaleX(-1);
+}
+.base-timer__circle[data-v-1fc90fb6] {
+  fill: none;
+  stroke: none;
+}
+.base-timer__path-elapsed[data-v-1fc90fb6] {
+  stroke-width: 7px;
+  stroke: rgba(0, 0, 0, 0.04);
+}
+.base-timer__path-remaining[data-v-1fc90fb6] {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+.base-timer__path-remaining.green[data-v-1fc90fb6] {
+  color: rgba(60, 180, 132, 0.75);
+}
+.base-timer__path-remaining.orange[data-v-1fc90fb6] {
+  color: orange;
+}
+.base-timer__path-remaining.red[data-v-1fc90fb6] {
+  color: red;
+}
+.base-timer__label[data-v-1fc90fb6] {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.48);
+}</style><style type="text/css">
+.start-modal-context[data-v-36f1f496] {
+    padding: 20px;
+}
+.start-btn[data-v-36f1f496] {
+    width: 100%;
+    height: 50px
+}
+</style><style type="text/css">
+.times-up[data-v-47d844ee] {
+    font-size: 3em;
+    color: rgba(0,0,0,0.18);
+    -webkit-animation-name: appear-data-v-47d844ee;
+            animation-name: appear-data-v-47d844ee;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.question-item[data-v-47d844ee] {
+    height: 100%;
+}
+.quiz-challenge-window[data-v-47d844ee] {
+    /*width: 65vw;*/
+    height: 75vh;
+    opacity: 0;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-animation-name: expand-data-v-47d844ee;
+            animation-name: expand-data-v-47d844ee;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+}
+.quiz-challenge-context[data-v-47d844ee] {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 255);
+    -webkit-animation-name: appear-data-v-47d844ee;
+            animation-name: appear-data-v-47d844ee;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes expand-data-v-47d844ee {
+from {
+        width: 0;
+        opacity: 100%
+}
+to {
+        width: 65vw;
+        opacity: 100%
+}
+}
+@keyframes expand-data-v-47d844ee {
+from {
+        width: 0;
+        opacity: 100%
+}
+to {
+        width: 65vw;
+        opacity: 100%
+}
+}
+@-webkit-keyframes appear-data-v-47d844ee {
+from {
+        opacity: 0;
+}
+to {
+        opacity: 100%;
+}
+}
+@keyframes appear-data-v-47d844ee {
+from {
+        opacity: 0;
+}
+to {
+        opacity: 100%;
+}
+}
+
+
+</style><style type="text/css">
+.question-validate-button[data-v-a6951bcc] {
+    width: 300px;
+    min-height: 50px;
+    margin: 30px auto 0;
+}
+.question-statement > p[data-v-a6951bcc] {
+    font-size: x-large;
+}
+.question-context[data-v-a6951bcc] {
+    display: flex;
+    flex-flow: column;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    -webkit-animation: appear-data-v-a6951bcc;
+            animation: appear-data-v-a6951bcc;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    overflow: auto;
+}
+.disabled-button[data-v-a6951bcc] {
+    background-color: rgba(196,196,196,0.99) !important;
+    cursor: default;
+}
+.disable-button[data-v-a6951bcc]:focus {
+    background-color: rgba(196,196,196,0.99) !important;
+}
+.disable-button[data-v-a6951bcc]:active {
+    background-color: rgba(196,196,196,0.99) !important;
+}
+@-webkit-keyframes appear-data-v-a6951bcc {
+from {
+        opacity: 0;
+}
+to {
+        opacity: 100%;
+}
+}
+@keyframes appear-data-v-a6951bcc {
+from {
+        opacity: 0;
+}
+to {
+        opacity: 100%;
+}
+}
+</style><style type="text/css">
+.selected[data-v-56708ff2] {
+    font-size: 1.2em;
+    color: rgba(209,209,209,0.99)
+}
+p[data-v-56708ff2] {
+    margin: 0 5px;
+    color: rgba(0,0,0,0.47);
+    font-size: 1.5rem;
+    text-align: justify;
+    overflow: hidden;
+}
+.answer-context[data-v-56708ff2] {
+    cursor: pointer;
+    display: flex;
+    padding: 15px;
+    justify-items: center;
+}
+.select-answer[data-v-56708ff2] {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.02);
+    box-shadow: 6px 6px 0.5rem 0.01rem rgba(0, 0, 0, 0.075) !important;
+    transition: box-shadow 0.1s ease-in-out
+}
+.text-answer[data-v-56708ff2] {
+    box-shadow: none;
+    background-color: transparent;
+}
+.answer-input[data-v-56708ff2] {
+    border: none;
+    font-size: 1.5em;
+    width: 100%;
+    resize: none;
+}
+.answer-input[data-v-56708ff2]::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.27);
+}
+.answer-input[data-v-56708ff2]::-moz-placeholder {
+    color: rgba(0,0,0,0.27);
+}
+.answer-input[data-v-56708ff2]:-ms-input-placeholder {
+    color: rgba(0,0,0,0.27);
+}
+.answer-input[data-v-56708ff2]::-ms-input-placeholder {
+    color: rgba(0,0,0,0.27);
+}
+.answer-input[data-v-56708ff2]::placeholder {
+    color: rgba(0,0,0,0.27);
+}
+.answer-input[data-v-56708ff2]:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+.active[data-v-56708ff2] {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075) !important;
+    background-color: rgba(0,0,0,0.05);
+}
+</style><style type="text/css">
+.score-list[data-v-12013985] {
+    padding: 10px 20px;
+}
+.score-item[data-v-12013985] {
+    height: 20px;
+    width: 100%;
+    color: rgba(0,0,0,0.68);
+    display: flex;
+    justify-content: space-between;
+}
+.score-item[data-v-12013985]:nth-child(2n) {
+    background-color: rgba(0,0,0,0.13)
+}
+.legend[data-v-12013985] {
+    color: rgba(0,0,0,0.68);
+    margin: 15px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.legend > div > p[data-v-12013985] {
+    color: rgba(0, 0, 0, 0.43);
+    margin-bottom: 0;
+}
+hr[data-v-12013985] {
+    padding: 0;
+    margin: 0 20px;
+}
+</style></head>
+<body>
+    <div id="app"><nav id="globalNavbar" class="navbar navbar-expand-md navbar-light bg-white shadow-sm"><div id="mainNavbarContainer"><a href="https://quizflare.herokuapp.com/home" class="navbar-brand"><img id="webAppLogo" src="./EZ£_files/logo.svg" alt="Quizshare Logo" class="svg-logo"></a> <a id="navbarTextBrand" href="https://quizflare.herokuapp.com/home" class="navbar-brand">
+                    Quizflare
+                </a> <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler ml-auto"><span class="navbar-toggler-icon"></span></button> <div id="navbarSupportedContent" class="collapse navbar-collapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><input id="navSearchbar" type="search" placeholder="Rechercher sur le site..." aria-label="Search" class="form-control glow"></li> <li><a href="https://quizflare.herokuapp.com/home" class="nav-link ">Accueil</a></li> <li><a href="https://quizflare.herokuapp.com/quiz" class="nav-link ">Explorer</a></li> <li><a href="https://quizflare.herokuapp.com/quiz/create" class="nav-link ">Créer un quiz</a></li></ul> <ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a id="navbarDropdown" href="https://quizflare.herokuapp.com/quiz/3?lang=fr#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+                                    Orlando Bloom
+                                    <span class="caret"></span></a> <div aria-labelledby="navbarDropdown" class="dropdown-menu" style="right: 0px; left: auto;"><a href="https://quizflare.herokuapp.com/quiz/create" class="dropdown-item">
+                                            Créer un quiz
+                                        </a> <a href="https://quizflare.herokuapp.com/profile" class="dropdown-item">
+                                            Profil
+                                        </a> <a href="https://quizflare.herokuapp.com/logout" onclick="event.preventDefault();
+                                                     document.getElementById(&#39;logout-form&#39;).submit();" class="dropdown-item">
+                                        Se déconnecter
+                                    </a> <form id="logout-form" action="https://quizflare.herokuapp.com/logout" method="POST" style="display: none;"><input type="hidden" name="_token" value="Di7ipovrwSVQeP0Fl1LklZGSbyyqSlaxC2bJXQqR"></form></div></li></ul></div></div></nav> <main class="py-4"><div class="main-content"><div class="row justify-content-center"><div class="col-md-12"><div class="card explore-card"><div class="card-body d-flex"><d class="main-section"><h2 title="Le Cinquième élément" class="quiz-play-title">Le Cinquième élément</h2> <hr> <h2 title="Orlando Bloom" class="quiz-play-author">
+        Créé par Orlando Bloom
+        le 19/04/2020
+    </h2> <h4 class="mt-4">Courte description</h4> <h5 class="quiz-short-description">Pour ceux qui se classe dans la catégorie des mites en pull-over !</h5> <h4 class="mt-4">Informations supplémentaires</h4> <h5 class="quiz-short-description">Voilà un petit questionnaire dont le thème est Le Cinquième élément, film réalisé par Luc Besson et sorti en 1997.
+Quiz largement inspiré de https://www.quizz.biz/quizz-98695.html#debutform98695</h5> <div data-v-36f1f496=""><!----> <!----> <div data-v-47d844ee="" data-v-36f1f496="" class="quiz-challenge-context"><div data-v-47d844ee="" class="my-3"><div data-v-1fc90fb6="" data-v-47d844ee="" class="base-timer"><svg data-v-1fc90fb6="" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="base-timer__svg"><g data-v-1fc90fb6="" class="base-timer__circle"><circle data-v-1fc90fb6="" cx="50" cy="50" r="45" class="base-timer__path-elapsed"></circle> <path data-v-1fc90fb6="" stroke-dasharray="268 283" d="
+        M 50, 50
+        m -45, 0
+        a 45,45 0 1,0 90,0
+        a 45,45 0 1,0 -90,0
+      " class="base-timer__path-remaining green"></path></g></svg> <span data-v-1fc90fb6="" class="base-timer__label">4:44</span></div></div> <div data-v-47d844ee="" class="quiz-challenge-window shadow-lg"><!----> <!----><!----><!----><!----><!----><div data-v-47d844ee="" class="question-item"><div data-v-a6951bcc="" data-v-47d844ee="" class="question-context mb-4"><div data-v-a6951bcc=""><div data-v-a6951bcc="" class="question-statement d-flex flex-column align-items-center"><p data-v-a6951bcc="" style="color: rgba(0, 0, 0, 0.27);">Question #5</p> <p data-v-a6951bcc="" style="color: rgba(0, 0, 0, 0.78);">Quel est le prénom du prêtre Cornelius?</p> <p data-v-a6951bcc="" style="color: rgba(0, 0, 0, 0.27);">Saisissez votre réponse au clavier :</p></div> <div data-v-a6951bcc="" class="question-answers d-flex flex-column"><div data-v-56708ff2="" data-v-a6951bcc=""><!----> <div data-v-56708ff2="" class="answer-context text-answer"><textarea data-v-56708ff2="" rows="7" placeholder="Saisissez la réponse..." class="answer-input"></textarea></div></div></div></div> <button data-v-a6951bcc="" class="question-validate-button btn btn-primary">Valider</button></div></div><!----><!----><!----></div></div></div> <h2 class="mt-5">Les meilleurs scores</h2> <hr> <p>Ci-dessous, la liste des 10 meilleurs scores réalisés sur ce quiz.</p> <div data-v-12013985=""><div data-v-12013985="" class="legend mt-2"><div data-v-12013985=""><p data-v-12013985="">Nom du jouer</p></div> <div data-v-12013985="" class="d-flex"><p data-v-12013985="" class="mr-3">Score</p> <p data-v-12013985="">Temps (s)</p></div></div> <hr data-v-12013985=""> <!----> <div data-v-12013985="" class="score-list"><div data-v-12013985="" class="score-item"><div data-v-12013985=""><p data-v-12013985="">Loïs Lacroux</p></div> <div data-v-12013985="" class="d-flex"><p data-v-12013985="" class="mr-3">89%</p> <p data-v-12013985="" style="margin-left: 30px;">0:43</p></div></div></div></div></d> <d class="side-section"><div class="popular-tags"><h2>Tags populaires</h2> <hr> <div class="content"><a title="Tout ce qui concerne ce site" href="https://quizflare.herokuapp.com/quiz?tag=Quizflare" class="tag">
+                Quizflare
+            </a> <a title="Tout ce qui concerne l&#39;education en general" href="https://quizflare.herokuapp.com/quiz?tag=Education" class="tag">
+                Education
+            </a> <a title="Tout ce qui concerne l&#39;univers cinematographique" href="https://quizflare.herokuapp.com/quiz?tag=Cinema" class="tag">
+                Cinema
+            </a> <a title="Tout ce qui concerne l&#39;univers des jeux videos" href="https://quizflare.herokuapp.com/quiz?tag=JeuxVideos" class="tag">
+                JeuxVideos
+            </a></div></div> <div class="popular-quizzes"><h2>Quiz populaires</h2> <hr> <div class="d-flex flex-column"><a href="https://quizflare.herokuapp.com/quiz/1?lang=fr" class="popular-quizzes-row"><p>
+                    01
+                </p> <div><p>
+                        Viens donc tester le fonctionnement du site !
+                    </p> <p>
+                        Le
+                        19/04/2020
+                        -
+                        Orlando Bloom
+                    </p></div></a> <a href="https://quizflare.herokuapp.com/quiz/3?lang=fr" class="popular-quizzes-row"><p>
+                    02
+                </p> <div><p>
+                        Le Cinquième élément
+                    </p> <p>
+                        Le
+                        19/04/2020
+                        -
+                        Orlando Bloom
+                    </p></div></a> <a href="https://quizflare.herokuapp.com/quiz/4?lang=fr" class="popular-quizzes-row"><p>
+                    03
+                </p> <div><p>
+                        Ghost Recon Wildlands
+                    </p> <p>
+                        Le
+                        19/04/2020
+                        -
+                        Tangi
+                    </p></div></a> <a href="https://quizflare.herokuapp.com/quiz/5?lang=fr" class="popular-quizzes-row"><p>
+                    04
+                </p> <div><p>
+                        Peaky Blinders
+                    </p> <p>
+                        Le
+                        15/05/2020
+                        -
+                        toto
+                    </p></div></a></div></div></d></div></div></div></div></div> <footer><div class="container py-4"><hr class="mx-5"> <p>© 2020 Quizflare Inc.</p> <hr class="mx-5"></div></footer></main> <div data-v-531f6250=""><div data-v-531f6250="" class="page-info"><p data-v-531f6250="">?</p></div> <!----></div></div>
+
+    
+
+
+</body></html>

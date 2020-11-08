@@ -1,0 +1,94 @@
+body {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 98vh;
+}
+
+#main_title {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    height: 8vh;
+    width: 50vw;
+    border-radius: 7px;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.15);
+}
+
+#main_test {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    height: 86vh;
+    width: 50vw;
+    border-radius: 7px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.152);
+    overflow: hidden;
+}
+
+#pointer {
+    position: absolute;
+    pointer-events: none;
+}
+
+h1, h2, h3, h4, p {
+    font-family: Verdana, sans-serif;
+}
+
+.fullscreen {
+    position: absolute;
+    height: 100vh !important;
+    width: 100vw !important;
+    cursor: none;
+}
+
+#start_btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#start_btn, img {
+    transform: scale(0.6);
+}
+
+#start_btn, p {
+    text-align: center;
+    font-size: 4rem;
+    margin: auto
+}
+
+/* @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'); */
+
+#main_matrix {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70vw;
+    height: 98vh;
+}
+
+/* Decorations */
+.btn {
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  flex-grow: 1;
+  background-color: thistle;
+}
+
+.placeholder, .placeholder:hover, .placeholder:active {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: default;
+}
+
+.wrong {
+    background-color: tomato !important;
+}
+
+.right {
+    background-color: rgb(108, 255, 71) !important;
+}

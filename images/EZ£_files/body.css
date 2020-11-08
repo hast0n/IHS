@@ -1,0 +1,351 @@
+:root {
+    --backgroundColor : white;
+    /*--backgroundColor : #f2f2f2;*/
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+#app {
+    height:100%;
+    /*background-image: url("../images/close-up-photography-of-colored-pencils-743986.png");*/
+    background-size: cover;
+    background-position-y: bottom;
+    background-color: var(--backgroundColor);
+}
+
+main {
+    margin-top : 55px;
+    background-color: var(--backgroundColor);
+}
+
+.glow:focus {
+    border-color: #ff80ff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0) inset,
+    0px 0px 8px rgba(255, 120, 45, 0.9);
+    background-color: rgba(255, 100, 45, 0.02);
+}
+
+footer > div.container {
+    display: flex;
+    justify-content: center;
+    color: var(--navTextColor);
+    align-items: center;
+}
+
+footer > div.container > p {
+    padding:0;
+    margin: 0;
+
+}
+
+footer > div.container > hr {
+    height: 0.001em;
+    width: 20%;
+    padding: 0;
+    color: var(--navTextColor);
+}
+
+.auth-card {
+    background: rgba(100%, 100%, 100%, 0.7);
+    color: var(--navTextColor)
+}
+
+.auth-card .card-header {
+    font-size:20px;
+    background: white;
+}
+
+.auth-card .card-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#bigLogo {
+    height:12vh;
+}
+
+#bigBigLogo {
+    height:15vh;
+    margin-right: 30px
+}
+
+.container {
+    padding-bottom: 10px;
+}
+
+.btn-primary {
+    border: none;
+    margin-top: 20px;
+    background-color: #ff3131;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e52d2d;
+}
+
+.btn-primary:active {
+    background-color: #b02323 !important;
+}
+
+.btn-primary:focus {
+    background-color: #e52d2d !important;
+}
+
+.brand-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.brand-title > p {
+    background: linear-gradient(55deg, rgba(255,170,9,0.9), rgba(234,0,186,0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4em;
+    padding-left: 40px;
+}
+
+.explore-card {
+    background-color: white;
+    border-radius: 0;
+    border: none;
+    /*-webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.14);*/
+    /*-moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.14);*/
+    /*box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.14);*/
+}
+/* when viewport is small -> stack layout
+with tags on bottom*/
+.main-section {
+    width:70%;
+}
+
+.main-section > h2 {
+    display: flex;
+    align-items: baseline;
+}
+
+.main-section > h2 > p {
+    color: #cccccc;
+    font-size: 0.8em;
+    margin: 0px 10px;
+}
+
+.side-section {
+    width:25%;
+    display: flex;
+    flex-flow: column;
+    margin-left: 5%;
+}
+
+.main-content {
+    margin: 0 15% 0 15%;
+    text-align: justify;
+}
+
+h2.quiz-title {
+    /*display: flex;*/
+    font-weight: lighter;
+    font-size: x-large;
+    margin-bottom: 0;
+    color: rgb(65, 68, 71);
+    align-items: baseline;
+}
+
+p.quiz-short-description {
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.explore-card > .card-body {
+    padding: 2.25rem;
+}
+
+div.quiz-item {
+    display: flex;
+    flex-flow: column;
+    padding: 30px 0px;
+}
+
+div.quiz-item:hover {
+    text-decoration: none;
+    background-color: #fcfcfc;
+}
+
+p.quiz-date {
+    margin:0;
+    color: #748285;
+}
+
+div.rating {
+    display: flex;
+    justify-content: space-between;
+    color: #c183a0;
+    font-size: small;
+}
+
+a.quiz-item-link {
+    text-decoration: none;
+}
+
+
+div.popular-tags {
+    width:100%;
+    margin-bottom: 30px;
+}
+
+div.popular-tags > div.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+a.tag {
+    margin: 2px;
+    color: white;
+    padding: 1px 10px 1px 10px;
+    border-radius: 20px;
+    background: linear-gradient(55deg, rgba(233, 56, 0, 0.8), rgba(222, 0, 93, 0.8));
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1);
+}
+
+a.tag:hover {
+    transform: scale(1.04);
+}
+
+.popular-quizzes-row {
+    display: flex;
+    text-decoration: none;
+    /*align-items: first;*/
+}
+
+.popular-quizzes-row:hover {
+    text-decoration: none;
+    background-color: #f9f9f9;
+}
+
+a.popular-quizzes-row > p {
+    font-size: x-large;
+    color: #e2e2e2;
+    margin: 6px;
+}
+
+a.popular-quizzes-row > div {
+    margin: 10px 0 0 10px;
+    color: #1b1e21;
+}
+
+a.popular-quizzes-row > div > p {
+    margin:0;
+    /*font-weight: bold;*/
+    color: #1b1e21;
+}
+
+a.popular-quizzes-row > div > p:nth-child(2) {
+    color: #8b969e;
+    font-weight: initial;
+}
+
+form.quiz-creation-form > div.form-item {
+    display: flex;
+    flex-flow: column;
+}
+
+form > .form-item > label {
+    margin-top: 10px;
+}
+
+form > .hover-indicator:hover:before {
+    visibility: visible;
+    width: 30px;
+}
+
+form > .hover-indicator:before {
+    content: '';
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 5px;
+    margin-top: 5px;
+    background: linear-gradient(55deg, rgba(233, 100, 0, 0.9), rgba(222, 0, 93, 0.9));
+    transition: .1s linear;
+    /*border-radius: 10px;*/
+}
+
+form > .form-item {
+    display: flex;
+    margin-top: 20px;
+    font-size: large;
+}
+
+div.difficulty-level {
+    /*display: flex;*/
+    /*flex-flow: column;*/
+}
+
+.quiz-picture-input > label {
+    font-size: large;
+    margin-top: 20px;
+}
+
+.quiz-play-author {
+    color: rgba(0, 0, 0, 0.56);
+    font-size: x-large;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.quiz-play-title {
+    overflow: hidden;
+}
+
+h5.quiz-short-description {
+    color: rgba(0,0,0,0.44)
+}
+
+.home-expo {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.expo-text {
+    color: rgba(0,0,0,0.54);
+    font-size: 2em;
+    text-align: justify;
+}
+
+.home-sep {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    padding: 50px
+}
+
+.brand-gradient {
+    background: linear-gradient(55deg, rgba(255,170,9,0.9), rgba(234,0,186,0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                 supported by Chrome, Opera and Firefox */
+}
+
+h2.heading {
+    margin-top: 50px;
+}
+
+
