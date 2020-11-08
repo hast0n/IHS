@@ -36,7 +36,7 @@ class Grid {
         this.elapsed = 0;
         this.currentIndex = -1;
         this.seriesIndex = seriesIndex;
-        this.clickNumber = 0;
+        this.clickNumber = layout.clickNumber;
 
         document.getElementById("exportBtn").addEventListener('click', () => {this.exportToCsv()}, false)
 
@@ -62,15 +62,24 @@ class Grid {
     }
 
     populate() {
+
         var row, col;
-        var t = 0;
+        var ids = [...Array(this.clickNumber).keys()]
         
+        console.log(this.clickNumber);
+        
+        this.shuffle(ids);
+        
+
         for (row = 0; row < this.layout.length; row++) {
             for (col = 0; col < this.layout[row].length; col++) {
                 
                 var node;
-
+                
                 if (this.layout[row][col] != undefined) {
+                    
+                    var t = ids.pop();
+
                     
                     node = document.createElement('button');
                     node.type = 'button';
@@ -82,7 +91,7 @@ class Grid {
                     node.id = t++;
 
                     if (this.numbersToLetters == null) {
-                        node.textContent = '('+t+')';
+                        node.textContent = '(' + t + ')';
                     }
                     else {
                         node.textContent = this.defaultText + this.numberToLetters[t-1];
@@ -113,6 +122,26 @@ class Grid {
     
     stopTime() {
         clearInterval(this.timeInterval);
+    }
+
+    shuffle(array) {
+    
+        var currentIndex = array.length, temporaryValue, randomIndex;
+      
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+      
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array;
     }
     
     /* ----------------------------------------------- */
@@ -195,16 +224,18 @@ class Layout {
         this.layout = layout;
         this.matrix = Array.from(Array(height), () => new Array(width));
 
-        if (layout == null) populateRandom(n);
+        if (layout == null) this.populateRandom(n);
         else this.populate();
     }
 
     populateRandom(n) {
 
+        this.clickNumber = n;
+
         for (var i = 0; i < n; i++) {
         
-            row = Math.floor(Math.random() * height);
-            col = Math.floor(Math.random() * width);
+            var row = Math.floor(Math.random() * this.height);
+            var col = Math.floor(Math.random() * this.width);
 
             if (this.matrix[row][col] != undefined) {
                 i--; continue; // malheureusement c'est possible --'
@@ -224,14 +255,18 @@ class Layout {
 
             this.matrix[row][col] = i+1;
         }
+
+        this.clickNumber = this.layout.length;
+
     }
 }
 
-var myLayout = new Layout(10, 13, [
-    [0, 2], [0, 8], [2, 4], 
-    [7, 6], [5, 2], [11, 3],
-    [9, 9], [4, 7], [9, 2]
-]);
+var myLayout = new Layout(10, 13, null, 9)
+//      [
+//     [0, 2], [0, 8], [2, 4], 
+//     [7, 6], [5, 2], [11, 3],
+//     [9, 9], [4, 7], [9, 2]
+// ]);
 
 var myGrid = new Grid(myLayout, 1);
 
