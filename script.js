@@ -272,6 +272,7 @@ var myGrid = new Grid(myLayout, 1);
 
 document.body.onkeyup = function(e) {
     if (e.keyCode == 32 && !started) {
+        started = true;
         myGrid.Test();
     }
 }
