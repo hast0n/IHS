@@ -267,9 +267,12 @@ var myLayout = new Layout(10, 13, null, 9)
 //     [9, 9], [4, 7], [9, 2]
 // ]);
 
+var started = false;
 var myGrid = new Grid(myLayout, 1);
 
-
-
-myGrid.Test();
+document.body.onkeyup = function(e) {
+    if (e.keyCode == 32 && !started) {
+        myGrid.Test();
+    }
+}
 
